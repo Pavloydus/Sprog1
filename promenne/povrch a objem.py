@@ -11,3 +11,4 @@ V = round(math.pi * (r ** 2) * v, 2)
 
 #Výstup
 print(f"Povrch válce: {S} cm**2")
+print(f"Objem válce: {V} cm**3")
