@@ -3,7 +3,7 @@ objem = float(input("Objem dat (v MB): "))
 rychlost = float(input("Rychlost stahování (v Mbit/s): "))
 
 # Výpočet
-t = round(objem * 8 / rychlost, 2)
+t = objem * 8 / rychlost
 
 # Výstup
-print(f"Doba stahování: {t} s")
+print(f"Doba stahování: {round(t, 2)} s")

@@ -2,8 +2,8 @@
 C = float(input("Teplota (v °C): "))
 
 # Výpočet
-K = round(C + 273.15, 2)
-F = round(C * 9/5 + 32, 2)
+K = C + 273.15
+F = C * 9/5 + 32
 
 # Výstup
-print(f"Teplota: {K} K, {F} F")
+print(f"Teplota: {round(K, 2)} K, {round(F, 2)} F")

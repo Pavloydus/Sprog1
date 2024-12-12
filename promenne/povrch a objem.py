@@ -5,10 +5,10 @@ v = float(input("Výška (v cm): "))
 r = float(input("Poloměr (v cm): "))
 
 # Povrch
-S = round(2 * math.pi * r * (r + v), 2)
+S = 2 * math.pi * r * (r + v)
 # Objem
-V = round(math.pi * (r ** 2) * v, 2)
+V = math.pi * (r ** 2) * v
 
 # Výstup
-print(f"Povrch válce: {S} cm**2")
-print(f"Objem válce: {V} cm**3")
+print(f"Povrch válce: {round(S, 2)} cm**2")
+print(f"Objem válce: {round(V, 2)} cm**3")
