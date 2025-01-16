@@ -9,8 +9,5 @@ if číslo2 < číslo1:
     max = číslo1
 else:
     max = číslo2
-    mid = číslo1
 if max < číslo3:
-    min = mid
-    mid = max
     max = číslo3
