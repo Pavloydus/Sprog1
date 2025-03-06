@@ -3,9 +3,13 @@ n = int(input("Zadej číslo:  "))
 prvocisla = []
 seznam = []
 for cislo in range(n):
-    seznam.append(cislo)
+    seznam.append(cislo + 1)
+seznam.remove(1)
 
-for x in range(n):
-    prvocisla.append(seznam.pop(x))
-    for y in range(len(prvocisla)):
-        if seznam[x]
+while len(seznam) > 0:
+    prvocisla.append(seznam.pop(0))
+    for x in seznam:
+        if x % prvocisla[-1] == 0:
+            seznam.remove(x)
+    
+print(prvocisla)
