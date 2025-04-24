@@ -1,9 +1,6 @@
 def palindrom(slovo):
-    obracene = slovo[::-1]
-    if obracene == slovo:
-        return True
-    else:
-        return False
+    slovo = slovo.lower()
+    return slovo == slovo[::-1]
 
 zadane = str(input("Zadej slovo: "))
 
