@@ -16,18 +16,38 @@ def bubble1(skip, step):
         bubble1(skip, step)
 
 def bubble2(skip, step, flip):
-    x = 0
-    while not skip == (len(seznam)-2):
-        step += 1
-        if seznam[x] > seznam[x+1]:
-            prehoz = seznam[x]
-            seznam[x] = seznam[x+1]
-            seznam[x+1] = prehoz
-            flip = -flip
-        if x in range(len(seznam)):
-        x + flip
-        print(seznam)
+    spravne = 0
+    if flip == 1:
+        for x in range(skip, len(seznam)-1):
+            step += 1
+            print(seznam[x])
+            print(seznam[x+1])
+            if seznam[x] > seznam[x+1]:
+                prehoz = seznam[x]
+                seznam[x] = seznam[x+1]
+                seznam[x+1] = prehoz
+            else:
+                spravne += 1
+            print(seznam)
+            print(step)
+    else:
+        for x in range(len(seznam)-1-skip, 0, -1):
+            step += 1
+            print(seznam[x])
+            print(seznam[x-1])
+            if seznam[x] < seznam[x-1]:
+                prehoz = seznam[x]
+                seznam[x] = seznam[x-1]
+                seznam[x-1] = prehoz
+            else:
+                spravne += 1
+            print(seznam)
+            print(step)
+    flip = -flip
     skip += 1
-    print(step)
+    if skip == (len(seznam)-2) or spravne == len(seznam)-1:
+        return seznam
+    else:
+        bubble2(skip, step, flip)
 
 print(bubble2(0, 0, 1))
