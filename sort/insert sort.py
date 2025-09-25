@@ -1,17 +1,26 @@
 seznam = [4, 2, 9, 7, 3]
 
-def place(cislo, x, skip):
-    if cislo < seznam[x-skip] and (x-skip) >= 0:
-        place(cislo, x, skip + 1)
+def place(seznam, x, skip):
+    if seznam[x] < seznam[x-skip] and (x-skip) >= 0:
+        place(seznam[x], x, skip + 1)
     else:
-        for y in range(sorted):
-            shift = seznam[x-skip+1]
-            seznam[x-skip+1] = cislo
-            
-
+        seznam2 = []
+        for y in range(len(seznam)-1):
+            if y < x:
+                seznam2.append(seznam[y])
+            elif y == x:
+                seznam2.append(seznam[x])
+            else:
+                seznam2.append(seznam[y+1])
+        seznam = seznam2
         return
 
-def insert1(sorted=1, ):
+def insert1(sorted):
     while sorted != len(seznam):
-        place(seznam[sorted], sorted, 1)
+        place(seznam, sorted, 1)
         sorted += 1
+    return seznam
+
+print(insert1(1))
+
+
