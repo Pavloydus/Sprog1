@@ -5,13 +5,10 @@ def insert1(seznam):
         skip = sorted
         while skip >= 0:
             step += 1
-            if seznam[skip] > seznam[skip + 1]:
-                shift = seznam[skip]
-                seznam[skip] = seznam[skip + 1]
-                seznam[skip + 1] = shift
+            if seznam[skip] > seznam[skip+1]:
+                seznam[skip], seznam[skip+1] = seznam[skip+1], seznam[skip]
                 skip -= 1
             else:
-                skip -= 1
-                continue
+                break
         sorted += 1
     return step
