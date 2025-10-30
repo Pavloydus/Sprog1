@@ -1,5 +1,6 @@
 def partition1(left, right, seznam, step):
     pivot = seznam[round((left + right)/2)]
+    mid = right
     while left <= right:
         step += 1
         while seznam[left] < pivot:
@@ -15,15 +16,20 @@ def partition1(left, right, seznam, step):
             seznam[left], seznam[right] = seznam[right], seznam[left]
             left += 1
             right -= 1
-    return left, step
+    return left, mid, step
 
-def quick1(left, right, seznam, step):
+def re_quick1(left, right, seznam, step):
     step += 1
-    if left < right:
-        mid, step = partition1(left, right, seznam, step)
-        print("aaaaaaaaaaa")
-        step = quick1(left, mid-1, seznam, step)
-        step = quick1(mid, right, seznam, step)
+    if right - left > 1:
+        left, right, step = partition1(left, right, seznam, step)
+        print("aaaaaaaa")
+        step = re_quick1(0, left-1, seznam, step)
+        step = re_quick1(left, right, seznam, step)
     return step
 
-print(quick1(0, 10, [1, 8, 6, 44, 11, 12, 7, 9, 46, 8, 2], 0))
+def quick1(seznam):
+    left = 0
+    right = len(seznam)-1
+    step = 0
+    step = re_quick1(left, right, seznam, step)
+    return step
