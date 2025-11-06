@@ -46,7 +46,7 @@ def measure_sorts():
     plt.plot(lists_lens, insert1_results, label='insert 1', color = 'blue')
     plt.plot(lists_lens, selection1_results, label='selection 1', color = 'green')
     plt.plot(lists_lens, shell1_results, label='shell 1', color = 'purple')
-    #plt.plot(lists_lens, quick1_results, label='quick 1', color = 'black')
+    #plt.plot(lists_lens, quick1_results, label='quick 1', color = 'gray')
     plt.plot(lists_lens, merge1_results, label='merge 1', color = 'black')
 
 
