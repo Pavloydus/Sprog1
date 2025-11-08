@@ -9,7 +9,7 @@ from bubble4 import bubble4
 from insert1 import insert1
 from selection1 import selection1
 from shell1 import shell1
-#from quick1 import quick1
+from quick1 import quick1
 from merge1 import merge1
 
 
