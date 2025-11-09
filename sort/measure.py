@@ -23,7 +23,7 @@ def measure_sorts():
     insert1_results = []
     selection1_results = []
     shell1_results = []
-    #quick1_results = []
+    quick1_results = []
     merge1_results = []
 
     for n in range(10, 100, 10):
@@ -36,7 +36,7 @@ def measure_sorts():
         insert1_results.append(insert1(copy.deepcopy(unsorted_list)))
         selection1_results.append(selection1(copy.deepcopy(unsorted_list)))
         shell1_results.append(shell1(copy.deepcopy(unsorted_list)))
-        #quick1_results.append(quick1(copy.deepcopy(unsorted_list)))
+        quick1_results.append(quick1(copy.deepcopy(unsorted_list)))
         merge1_results.append(merge1(copy.deepcopy(unsorted_list)))
 
     plt.plot(lists_lens, bubble1_results, label='bubble 1', color = 'brown')
@@ -46,7 +46,7 @@ def measure_sorts():
     plt.plot(lists_lens, insert1_results, label='insert 1', color = 'blue')
     plt.plot(lists_lens, selection1_results, label='selection 1', color = 'green')
     plt.plot(lists_lens, shell1_results, label='shell 1', color = 'purple')
-    #plt.plot(lists_lens, quick1_results, label='quick 1', color = 'gray')
+    plt.plot(lists_lens, quick1_results, label='quick 1', color = 'gray')
     plt.plot(lists_lens, merge1_results, label='merge 1', color = 'black')
 
 
