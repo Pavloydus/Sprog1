@@ -10,10 +10,10 @@ class Hrac:
         self.hp -= dmg
     def money_check(self):
         vysledek = self.__money
-        return vysledek
+        print(vysledek)
 
 hrac1 = Hrac("David")
 print(hrac1.hp)
 hrac1.zraneni(20)
 print(hrac1.hp)
-print(hrac1.zjisti_penize())
+hrac1.money_check()
