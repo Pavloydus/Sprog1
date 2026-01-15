@@ -33,10 +33,3 @@ class Stack:
     def peek(self):
         if not self.isEmpty():
             return self.top.value
-
-
-zasobnik = Stack()
-print(zasobnik.isEmpty())
-zasobnik.push(1)
-zasobnik.push(2)
-print(zasobnik.peek())
